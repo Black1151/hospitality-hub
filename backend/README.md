@@ -44,6 +44,10 @@ $ npm run start:dev
 $ npm run start:prod
 ```
 
+## GraphQL Playground
+
+After starting the application, visit `http://localhost:3000/graphql` to explore the GraphQL API.
+
 ## Run tests
 
 ```bash
