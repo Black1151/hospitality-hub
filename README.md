@@ -16,6 +16,6 @@ The services started are:
 
 - **db** – PostgreSQL database available on port 5432.
 - **backend** – NestJS application available on port 3000.
-- **frontend** – static frontend served with nginx on port 8080.
+- **frontend** – Next.js application served by Node on port 8080.
 
 The backend receives a `DATABASE_URL` environment variable pointing at the Postgres service.
