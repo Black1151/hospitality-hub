@@ -1,8 +1,8 @@
 FROM node:20-alpine AS build
 WORKDIR /app
-COPY frontend/package*.json ./
+COPY package*.json ./
 RUN if [ -f package.json ]; then npm install; fi
-COPY frontend .
+COPY . .
 RUN if [ -f package.json ]; then npm run build; fi
 
 FROM nginx:alpine

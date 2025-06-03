@@ -20,8 +20,7 @@ services:
       DATABASE_URL: postgres://postgres:postgres@db:5432/hospitality
   frontend:
     build:
-      context: .
-      dockerfile: Dockerfile.frontend
+      context: ./frontend
     ports:
       - "8080:80"
     depends_on:
