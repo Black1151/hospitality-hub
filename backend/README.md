@@ -44,9 +44,9 @@ $ npm run start:dev
 $ npm run start:prod
 ```
 
-## GraphQL Playground
+## Sample REST Endpoint
 
-After starting the application, visit `http://localhost:3000/graphql` to explore the GraphQL API.
+After starting the application, visit `http://localhost:3000/` to see the default REST response.
 
 ## Run tests
 
