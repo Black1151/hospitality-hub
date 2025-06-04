@@ -1,4 +1,5 @@
 version: "3.9"
+
 services:
   db:
     image: postgres:17-alpine
@@ -9,7 +10,8 @@ services:
     volumes:
       - db-data:/var/lib/postgresql/data
     ports:
-      - "5432:5432"
+      - "15432:5432"
+
   backend:
     build: ./backend
     ports:
@@ -18,6 +20,12 @@ services:
       - db
     environment:
       DATABASE_URL: postgres://postgres:postgres@db:5432/hospitality
+      DB_HOST: db
+      DB_PORT: 5432
+      DB_USERNAME: postgres
+      DB_PASSWORD: postgres
+      DB_NAME: hospitality
+
   frontend:
     build:
       context: ./frontend
@@ -25,5 +33,6 @@ services:
       - "8080:3000"
     depends_on:
       - backend
+
 volumes:
   db-data:
